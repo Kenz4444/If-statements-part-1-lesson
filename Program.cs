@@ -5,10 +5,11 @@ namespace If_statements_part_1_lesson
     internal class Program
     {
         static void Main(string[] args)
-        {   //Task1(); 
-            //Task2();
-            //Task3();
+        {   Task1(); 
+            Task2();
+            Task3();
             Task4();
+            Task5();
         }
             
         static void Task1()
@@ -86,7 +87,43 @@ namespace If_statements_part_1_lesson
             Console.Write("How old are you? ");
             Console.Write("");
             int.TryParse(Console.ReadLine(), out age);
-
+            if (age < 16) 
+            {
+                Console.WriteLine("You cannont drive!");
+            }
+            if (age < 18) 
+            {
+                Console.WriteLine("You cannont vote");
+            }
+            if (age < 25)
+            {
+                Console.WriteLine("You cannot rent a car");
+            }
+            if (age >= 25) 
+            {
+                Console.WriteLine("You can do anything thats legal");
+            }
+            
+            
+        }
+        static void Task5()
+        {
+            int temperature;
+            Console.Write("please enter the freezing temp of water: ");
+            Console.Write("");
+            int.TryParse (Console.ReadLine(), out temperature);
+            if (temperature ==0)
+            {
+                Console.WriteLine("Ah yes 0 degrees celsius! correct!");
+            }
+            if (temperature == 32)
+            {
+                Console.WriteLine("Ah yes 32 degrees fahrenheit! correct!");
+            }
+            if (temperature == 273)
+            {
+                Console.WriteLine("yes 273.3 kelvin is correct");
+            }
         }
     }
 }
